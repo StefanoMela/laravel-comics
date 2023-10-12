@@ -9,10 +9,10 @@
             <div class="navbar-nav">
                 <a class="nav-link {{Route::currentRouteName() == 'home' ? 'active' : ''}}"
                     href="{{ route('home') }}">Home</a>
-                <a class="nav-link{{Route::currentRouteName() == 'comics' ? 'active' : ''}}"
+                <a class="nav-link {{Route::currentRouteName() == 'comics' ? 'active' : ''}}"
                     href="{{route('comics')}}">Comics</a>
                 <a class="nav-link {{Route::currentRouteName() == 'contacts' ? 'active' : ''}}"
-                    href="{{route('contacts')}}" href="#">Contacts</a>
+                    href="{{route('contacts')}}">Contacts</a>
             </div>
         </div>
     </div>

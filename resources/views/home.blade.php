@@ -5,7 +5,20 @@
 @section('main-content')
 <section class="container">
     <h1 class="text-center">{{$title}}</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aliquam cum magnam architecto voluptate ut
-        dolorum. Corrupti deleniti quod, id officiis, veniam sed fugiat excepturi ipsa natus, laudantium dicta.</p>
+    <div class="row">
+        @foreach ($comics as $comic)
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">{{ $comic['title']}}</div>
+                <div class="card-body">
+                    <img src="{{  $comic['thumb'] }}" alt="" class="img-fluid">
+                    <p class="card-text">
+                        {{ $comic['description']}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
 </section>
 @endsection
