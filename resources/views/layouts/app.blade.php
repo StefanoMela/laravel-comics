@@ -17,6 +17,7 @@
 <body>
   <header>
     @include('partials._navbar')
+    @yield('jumbo')
   </header>
   <main>@yield('main-content')</main>
   <footer>@yield('footer')</footer>

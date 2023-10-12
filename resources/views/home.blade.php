@@ -2,23 +2,23 @@
 
 @section('page-title', $title )
 
+
+@section('jumbo')
+@include('partials._jumbotron')
+@endsection
+
 @section('main-content')
-<section class="container">
-    <h1 class="text-center">{{$title}}</h1>
-    <div class="row">
-        @foreach ($comics as $comic)
-        <div class="col-md-3">
-            <div class="card">
-                <div class="card-header">{{ $comic['title']}}</div>
-                <div class="card-body">
-                    <img src="{{  $comic['thumb'] }}" alt="" class="img-fluid">
-                    <p class="card-text">
-                        {{ $comic['description']}}
-                    </p>
-                </div>
-            </div>
-        </div>
-        @endforeach
+<section class="card-container">
+
+    @foreach ($comics as $comic)
+
+    <div class="comic-card">
+        <img src="{{  $comic['thumb'] }}" alt="" class="card-img">
+        <h4>{{$comic['series']}}</h4>
+        <h6>{{$comic['price']}}</h6>
     </div>
+
+    @endforeach
+
 </section>
 @endsection

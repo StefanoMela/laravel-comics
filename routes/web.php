@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $title = "Homepage";
+    $title = "Comic Lists";
 
     $comics = config('comics.comics');
 
