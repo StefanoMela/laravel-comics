@@ -14,5 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+
+    $title = "Homepage";
+
+    config('comics.php');
+
+    return view('home', compact('title'));
+})->name('home');
+
+Route::get('/contacts', function () {
+
+    $title = "Contacts";
+
+    return view('contacts', compact('title'));
+})->name('contacts');
+
+Route::get('/comics', function () {
+
+    $title = "Comics";
+
+    return view('comics', compact('title'));
+})->name('comics');
+
