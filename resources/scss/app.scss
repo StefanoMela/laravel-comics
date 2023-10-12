@@ -62,14 +62,16 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
-    padding: 3rem 12rem;
+    padding: 3rem 6rem;
     overflow: auto;
 
     cursor: pointer;
 
     .comic-card {
         color: rgba(255, 255, 255, 0.903);
-        width: calc((100% / 6) - 0.5rem);
+        width: calc((100% / 6) - 2.5rem);
+
+        margin:0 1rem;
 
         .card-img {
             width: 200px;
