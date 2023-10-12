@@ -1,18 +1,19 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link {{Route::currentRouteName() == 'home' ? 'active' : ''}}"
-                    href="{{ route('home') }}">Home</a>
-                <a class="nav-link {{Route::currentRouteName() == 'comics' ? 'active' : ''}}"
-                    href="{{route('comics')}}">Comics</a>
-                <a class="nav-link {{Route::currentRouteName() == 'contacts' ? 'active' : ''}}"
-                    href="{{route('contacts')}}">Contacts</a>
+<nav>
+    <div class="header">
+        <div class="header__content">
+            <div class="header__logo">
+                <img src="{{url('/assets/images/dc-logo.png')}}" alt="" />
+            </div>
+            <div class="header__links">
+                <ul>
+                    @foreach ($header_links as $header_link)
+                    <li>
+                        <a href="{{$header_link['href']}}"
+                            class="nav-link">{{$header_link['text']}}
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>

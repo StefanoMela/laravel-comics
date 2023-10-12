@@ -18,8 +18,22 @@ Route::get('/', function () {
     $title = "Laravel Comics";
 
     $comics = config('comics.comics');
+    $header_links = config('comics.header_links');
+    $footer_links = config('comics.footer_links');
+    $shop_links = config('comics.shop_links');
+    $dc_links = config('comics.dc_links');
+    $sites_links = config('comics.sites_links');
 
-    return view('home', compact('title', 'comics'));
+    return view('home', 
+    compact(
+        'title', 
+        'comics', 
+        'header_links',
+        "footer_links",
+        "shop_links",
+        "dc_links",
+        "sites_links",
+    ));
 })->name('home');
 
 Route::get('/contacts', function () {
