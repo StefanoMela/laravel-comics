@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $title = "Comic Lists";
+    $title = "Laravel Comics";
 
     $comics = config('comics.comics');
 
@@ -24,15 +24,11 @@ Route::get('/', function () {
 
 Route::get('/contacts', function () {
 
-    $title = "Contacts";
-
-    return view('contacts', compact('title'));
+    return view('contacts');
 })->name('contacts');
 
 Route::get('/comics', function () {
 
-    $title = "Comics";
-
-    return view('comics', compact('title'));
+    return view('comics');
 })->name('comics');
 

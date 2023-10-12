@@ -14,7 +14,6 @@
     background-color: #1c1c1c;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 3rem;
@@ -24,11 +23,67 @@
 
     .comic-card {
         color: white;
-        width: calc((100% / 6) - .5rem);
+        width: calc((100% / 6) - 0.5rem);
 
-        .card-img{
+        .card-img {
             width: 200px;
             aspect-ratio: 1;
+        }
+    }
+}
+
+.footer-container {
+    width: 100%;
+    background-image: url(../assets/img/footer-bg.jpg);
+    padding-top: 2rem;
+    position: relative;
+
+    .fc_link_group {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding-left: 2rem;
+
+        color: #72787c;
+    }
+
+    .fc_img_overlay_container {
+        overflow: hidden;
+        img {
+            max-width: 450px;
+            position: absolute;
+            top: -85px;
+            right: 85px;
+        }
+    }
+
+    .bottom-footer {
+        width: 100%;
+        background-color: #303030;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1.5rem;
+
+        .fc_social_icons_container {
+            display: flex;
+            align-items: center;
+        }
+        .fc_social_icons_container > * {
+            padding-inline: 0.7rem;
+        }
+
+        .call__to__action__button {
+            color: white;
+            background-color: transparent;
+            text-transform: uppercase;
+            padding: 1rem;
+            border: 1px solid #0082f9;
+        }
+
+        .hl-text {
+            color: #0082f9;
+            font-size: larger;
         }
     }
 }

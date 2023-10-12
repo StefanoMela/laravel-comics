@@ -20,7 +20,9 @@
     @yield('jumbo')
   </header>
   <main>@yield('main-content')</main>
-  <footer>@yield('footer')</footer>
+  <footer>
+  @include('partials._footer')
+  </footer>
 </body>
 
 </html>
